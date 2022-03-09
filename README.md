@@ -27,4 +27,4 @@ db-name: bootcamp
 - Buatlah Rest Api berdasarkan Crud tersebut
 - Buatlah Form dengan menggunakan Angular berdasarkan Rest API yang telah dibuat
 
-- Selesai
+- Data belum tampil di frontend
