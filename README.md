@@ -17,7 +17,7 @@ Buatlah aplikasi CRUD sederhana menggunakan
 - Buatlah CURD berdasarkan tabel tersebut pada PostgreSQL Server berikut
 
 ```yaml
-host: 192.168.100.250
+host: tabeldata.ip-dynamic.com
 port: 5432
 user: bootcamp
 password: bootcamp202203
