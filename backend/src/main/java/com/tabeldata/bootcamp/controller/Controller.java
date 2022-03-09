@@ -73,7 +73,7 @@ public class Controller {
 
     @PostMapping("/update")
     public ResponseEntity<Map<String, Object>>
-    updateCategory(@RequestBody Product data) {
+    updateProduct(@RequestBody Product data) {
         Map<String, Object> hasil = new HashMap<>();
         dao.updateProduct(data);
         hasil.put("id", 0);
