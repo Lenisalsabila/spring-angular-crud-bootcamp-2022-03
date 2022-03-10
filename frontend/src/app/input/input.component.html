@@ -1,0 +1,75 @@
+<div class="card">
+    <div class="card-header">
+      Featured
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Tambah</h5>
+    </div>
+  
+    <div class="m-3">
+      <form [formGroup]="formProduct">
+        <div class="form-group">
+          <label for="id">ID</label>
+          <input type="text" class="form-control" id="id" aria-describedby="emailHelp"
+                 placeholder="Enter ID" formControlName="id">
+        </div>
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
+                 placeholder="Enter Department ID" formControlName="name">
+          <span *ngIf="!formProduct.get('name')?.valid && formProduct.get('name')?.touched"
+                class="error-block">
+          <span *ngIf="!formProduct.get('name')?.errors?.['minlength']"
+                class="error-block">
+                Panjang Minimal 1
+          </span>
+            </span>
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="text" class="form-control" id="price" aria-describedby="emailHelp"
+                 placeholder="Enter Your price" formControlName="price">
+          <span *ngIf="!formProduct.get('price')?.valid && formProduct.get('price')?.touched" class="error-block">
+          <span *ngIf="!formProduct.get('price')?.errors?.['minlength']"
+                class="error-block">
+                Panjang Minimal 3
+          </span>
+            </span>
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <input type="text" class="form-control" id="category" aria-describedby="emailHelp"
+                 placeholder="Enter Your Category" formControlName="category">
+          <span *ngIf="!formProduct.get('category')?.valid && formProduct.get('category')?.touched" class="error-block">
+          <span *ngIf="!formProduct.get('category')?.errors?.['minlength']"
+                class="error-block">
+                Panjang Minimal 3
+          </span>
+            </span>
+        </div>
+        <div class="form-group">
+            <label for="create_date">Create Date</label>
+            <input type="text" class="form-control" id="create_date" aria-describedby="emailHelp"
+                   placeholder="Enter Your create_date" formControlName="create_date">
+          </div>
+
+          <div class="form-group">
+            <label for="create_by">Create By</label>
+            <input type="text" class="form-control" id="create_by" aria-describedby="emailHelp"
+                   placeholder="Enter Your create_by" formControlName="create_by">
+            <span *ngIf="!formProduct.get('create_by')?.valid && formProduct.get('create_by')?.touched" class="error-block">
+            <span *ngIf="!formProduct.get('create_by')?.errors?.['minlength']"
+                  class="error-block">
+                  Panjang Minimal 3
+            </span>
+              </span>
+          </div>
+
+          <div class="form-group">
+        <button type="submit" (click)="simpan()" class="btn btn-primary">Simpan</button>
+        <button type="submit" (click)="update()" class="btn btn-primary">Update</button>
+    </div>
+      </form>
+    </div>
+  </div>

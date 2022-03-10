@@ -1,0 +1,41 @@
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Beranda</h5>
+    <p class="card-text">Hello Semoga Hari mu Menyenangkan :)</p>
+  </div>
+</div>
+
+<div class="container pt-2">
+  <a href="/input" class="btn btn-primary">Tambah</a>
+</div>
+
+<div class="container pt-2">
+</div>
+
+
+<table class = "table table-success table-striped">
+  <thead>
+  <tr align="center">
+    <th > ID </th>
+    <th> Name </th>
+    <th> Price</th>
+    <th> Category</th>
+    <th> Created Date</th>
+    <th> Created By</th>
+    <th> Aksi</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let Id of list" align="center">
+    <td>{{Id.id}}</td>
+    <td>{{Id.name}}</td>
+    <td>{{Id.price}}</td>
+    <td>{{Id.category}}</td>
+    <td>{{Id.create_date}}</td>
+    <td>{{Id.create_by}}</td>
+    <td>
+      <button type="button" (click)="deleteProduct(Id.id)" class="btn btn-danger">Delete</button>
+  </tr>
+  </tbody>
+</table>
