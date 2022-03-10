@@ -3,6 +3,6 @@ export class Product{
   name!: string;
   price!:number;
   category!: string;
-  create_date!: number;
+  create_date!: string;
   create_by!: string
 }

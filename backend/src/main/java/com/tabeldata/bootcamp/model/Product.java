@@ -2,6 +2,8 @@ package com.tabeldata.bootcamp.model;
 
 
 import lombok.Data;
+import lombok.experimental.NonFinal;
+
 import org.hibernate.validator.constraints.Length;
 
 
@@ -10,7 +12,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+
 
 @Data
 public class Product {
@@ -28,7 +30,9 @@ public class Product {
     @NotEmpty(message = "gak boleh kososng")
     private String category;
 
+    @NotEmpty
     private LocalDate create_date;
+    @NotEmpty
     private String create_by;
 
 

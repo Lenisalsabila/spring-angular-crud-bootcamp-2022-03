@@ -81,7 +81,6 @@ public class ProductDao {
             data.setCreate_date(create_date.toLocalDate());
             data.setCreate_by(rs.getString("create_by"));
             return data;
-
         }
     }
 
